@@ -30,9 +30,9 @@ class MainActivity : AppCompatActivity() {
         rvElement.setHasFixedSize(true)
         myAdapter.setOnItemClickListener(object : ElementAdapter.OnItemClickedListener {
             override fun onItemClick(position: Int) {
-                rvElement.visibility = View.INVISIBLE
                 textInputEditText.setText(myAdapter.newList[position].name)
                 txtCountry.text = textInputEditText.text
+                rvElement.visibility = View.INVISIBLE
                 //txtCountry.text = myAdapter.newList[position].name //Error
                 //Toast.makeText(this@MainActivity,"Sameer",Toast.LENGTH_SHORT).show()
             }
