@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_color"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutUserName"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:background="@color/darkslateblue"
+        app:endIconMode="clear_text"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="country_name"
+            android:inputType="text"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvElement"
+        android:layout_width="250dp"
+        android:layout_height="230dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="400dp"
+        android:background="@color/darkslateblue"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        app:layout_constraintStart_toStartOf="@id/textInputLayoutUserName"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayoutUserName" />
+
+    <TextView
+        android:id="@+id/txtCountry"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="76dp"
+        android:gravity="center"
+        android:text="Country Name"
+        android:background="@color/dimgray"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvElement" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
